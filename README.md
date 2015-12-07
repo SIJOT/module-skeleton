@@ -35,4 +35,6 @@ If you discover any security related issues, please email :author_email instead 
 
 ## Copyright and licensing
 
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
 ## Versioning
