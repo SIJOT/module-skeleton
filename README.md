@@ -31,6 +31,8 @@ If you like to use the facade, add this to your facades in `config/app.php`
 
 ## Security vurnabilities
 
+If you discover any security related issues, please email :author_email instead of using the issue tracker.
+
 ## Copyright and licensing
 
 ## Versioning
