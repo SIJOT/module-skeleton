@@ -28,7 +28,7 @@ class ApiServiceProvider extends ServiceProvider
         ];
 
         $this->getRouter()->group($routeConfig, function($router) {
-            $router->get('profile', ['uses' => 'ProfileController@getProfile']);
+            $router->get('profile', 'ProfileController@getProfile');
         });
     }
 
