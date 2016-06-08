@@ -3,7 +3,7 @@
   "description": "The api for timecontrol",
   "license": "MIT",
   "require": {
-    "php": ">=5.6.0",
+    "php": ">=5.5.0",
     "illuminate/support": "5.1.*",
     "illuminate/console": "5.1.*"
   },
