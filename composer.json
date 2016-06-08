@@ -16,7 +16,6 @@
       "Idevelopment\\Timecontrol\\Api\\": "src/"
     }
   },
-  "minimum-stability": "stable",
   "scripts": {
     "test": "phpunit"
   },
