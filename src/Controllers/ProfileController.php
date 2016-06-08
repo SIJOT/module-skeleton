@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
  * Class ProfileController
  * @package Idevelopment\Timecontrol\Api\Controllers
  */
-class ProfileController
+class ProfileController extends Controller
 {
     public function getProfile()
     {
