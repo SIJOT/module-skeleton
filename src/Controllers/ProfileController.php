@@ -13,6 +13,6 @@ class ProfileController extends Controller
 {
     public function getProfile()
     {
-        return 'test';
+        
     }
 }

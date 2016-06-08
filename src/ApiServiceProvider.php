@@ -18,17 +18,34 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Asset publishing
         $this->publishes([
             __DIR__ . '/Config/Timecontrol-api.php' => config_path('Timecontrol-api.php')
         ], 'config');
 
+
+
+        // Routing
         $routeConfig = [
             'namespace' => 'Idevelopment\Timecontrol\Api\Controllers',
             'prefix' => $this->app['config']->get('Timecontrol-api.route_prefix'),
         ];
 
         $this->getRouter()->group($routeConfig, function($router) {
+            // Profile routes
             $router->get('profile', 'ProfileController@getProfile');
+
+            // Staff routes
+            $router->get('staff', 'StaffController@all');
+            $router->get('staff/{id}', 'StaffController@specific');
+            $router->post('staff/create', 'StaffController@create');
+            $router->patch('staff/update/{id}', 'StaffController@update');
+            $router->delete('staff/destroy/{id}', 'StaffController@destroy');
+
+            // Roles api.
+
+            // Department routes
+
         });
     }
 
