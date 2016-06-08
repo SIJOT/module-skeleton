@@ -7,20 +7,15 @@
     "Timecontrol"
   ], 
   "homepage": "https://github.com/Tjoosten/timecontrol-api",
-  "license": "MIT", 
-  "authors": [
-    {
-      "name": "Tim Joosten",
-      "email": "Topairy@gmail.com",
-      "role:": "developer"
-    }
-  ],
+  "license": "MIT",
   "require": {
-    "php": ">=5.6.0"
-  }
+    "php": ">=5.6.0",
+    "illuminate/support": "5.1.*",
+    "illuminate/console": "*"
+  },
   "require-dev": {
     "phpunit/phpunit": "4.*"
-  }
+  },
   "autoload": {
     "psr-4": {
       "Idevelopment\\Timecontrol\\Api\\": "src"

@@ -2,11 +2,13 @@
 
 namespace Idevelopment\Timecontrol\Api;
 
+use Illuminate\Support\ServiceProvider;
+
 /**
  * Class ServiceProvider
  * @package Idevelopment\Timecontrol\Api
  */
-class ServiceProvider
+class ApiServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -15,7 +17,9 @@ class ServiceProvider
      */
     public function boot()
     {
-        // Write your magic here.
+        if (! $this->app->routesAreCached()) {
+            require __DIR__ . 'Routes.php';
+        }
     }
 
     /**
@@ -25,6 +29,6 @@ class ServiceProvider
      */
     public function register()
     {
-        
+
     }
 }
