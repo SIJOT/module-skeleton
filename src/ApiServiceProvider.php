@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
  * Class ServiceProvider
  * @package Idevelopment\Timecontrol\Api
  */
-class ApiServiceProvider
+class ApiServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
