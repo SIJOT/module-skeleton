@@ -1,11 +1,11 @@
 {
   "name": "tjoosten/timecontrol-api",
   "description": "The api for timecontrol",
-  "keywords": [
+  "keywords": {
     "Tjoosten",
     "Api",
     "Timecontrol"
-  ], 
+  },
   "homepage": "https://github.com/Tjoosten/timecontrol-api",
   "license": "MIT",
   "require": {
