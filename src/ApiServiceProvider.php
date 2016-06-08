@@ -2,6 +2,7 @@
 
 namespace Idevelopment\Timecontrol\Api;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -17,9 +18,24 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (! $this->app->routesAreCached()) {
-            require __DIR__ . 'Routes.php';
-        }
+        $routeConfig = [
+            'namespace' => 'Idevelopment\Timecontrol\Api\Controllers',
+            'prefix' => $this->app['config']->get('Timecontrol-api.route_prefix'),
+        ];
+
+        $this->getRouter()->group($routeConfig, function($router) {
+            $router->get('assets/javascript', ['uses' => 'AssetController@js', 'as' => 'debugbar.assets.js']);
+        });
+    }
+
+    /**
+     * Get the active router.
+     *
+     * @return Router
+     */
+    protected function getRouter()
+    {
+        return $this->app['router'];
     }
 
     /**
