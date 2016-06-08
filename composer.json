@@ -1,7 +1,6 @@
 {
   "name": "tjoosten/timecontrol-api",
   "description": "The api for timecontrol",
-  "homepage": "https://github.com/Tjoosten/timecontrol-api",
   "license": "MIT",
   "require": {
     "php": ">=5.6.0",
@@ -18,5 +17,6 @@
   },
   "scripts": {
     "test": "phpunit"
-  }
+  },
+  "minimum-stability": "stable"
 }
