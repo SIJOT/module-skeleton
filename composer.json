@@ -1,18 +1,18 @@
 {
-  "name": ":author_name/:package_name", 
-  "description": ":package_description", 
+  "name": "Tjoosten/Timecontrol-api",
+  "description": "The api for timecontrol",
   "keywords": [
-    ":author_name", 
-    ":package_name"
+    ":Tjoosten",
+    "Api",
+    "Timecontrol"
   ], 
-  "homepage": "https://github.com/:author_name/:package_name", 
+  "homepage": "https://github.com/Tjoosten/timecontrol-api",
   "license": "MIT", 
   "authors": [
     {
-      "name"= ":author_name", 
-      "email"= ":author_email", 
-      "homepage"= ":author_website", 
-      "role:" "developer"
+      "name": "Tim Joosten",
+      "email": "Topairy@gmail.com",
+      "role:": "developer"
     }
   ],
   "require": {
@@ -21,19 +21,14 @@
   "require-dev": {
     "phpunit/phpunit": "4.*"
   }
-  "autoload" {
+  "autoload": {
     "psr-4": {
-      ":author_name\\:package_name\\": "src"
+      "Idevelopment\\Timecontrol\\Api\\": "src"
     }
   },
-  "autoload-dev" {
-    "psr-4": {
-      ":author_name\\:package_name\\Test\\": "tests"
-    }
-  }
   "scripts": {
     "test": "phpunit"
-  }
+  },
   "extra": {
     "branch-alias": {
       "dev-master": "1.0.dev"
