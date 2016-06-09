@@ -2,6 +2,12 @@
 
 This package provides the timecontrol API.
 
+## Requirements.
+
+- PHP >= 5.6.0
+- Timecontrol application 
+- chrisbjr/api-guard 3.1.*
+
 ## Installation 
 
 Require this package with composer: 
