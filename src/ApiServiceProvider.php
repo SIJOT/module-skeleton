@@ -19,11 +19,10 @@ class ApiServiceProvider extends ServiceProvider
     public function boot()
     {
         // Asset publishing
+        $this->publishes([__DIR__ . '../tests' => 'tests'], 'PHPUnit');
         $this->publishes([
             __DIR__ . '/Config/Timecontrol-api.php' => config_path('Timecontrol-api.php')
         ], 'config');
-
-
 
         // Routing
         $routeConfig = [
