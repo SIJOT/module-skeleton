@@ -33,6 +33,7 @@ class ApiServiceProvider extends ServiceProvider
         $this->getRouter()->group($routeConfig, function($router) {
             // Profile routes
             $router->get('profile', 'ProfileController@getProfile');
+            $router->post('profile/{id}', 'ProfileController@updateProfile');
 
             // Staff routes
             $router->get('staff', 'StaffController@all');
