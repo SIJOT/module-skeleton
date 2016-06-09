@@ -14,13 +14,13 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 
 ### Laravel 5.X
 
-```bash
+```php
 Idevelopment\Timecontrol\Api\ServiceProvider::class
 ```
 
 If you like to use the facade, add this to your facades in `config/app.php`
 
-```bash
+```php
 'TimecontrolApi' => Idevelopment\Timecontrol\Api\Facade\TimecontrolApi::class,
 ```
 
