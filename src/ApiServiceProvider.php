@@ -22,12 +22,19 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Asset publishing
-        $this->publishes([__DIR__ . '/Factories' => database_path('factories')], 'factories');
+        // [Asset publishing]
+        //
+        // | Name:       | Command:                             | Description:                            | 
+        // | ----------- | ------------------------------------ | --------------------------------------- |
+        // | Factories   | php artisan vendor:publish Factories | Publish the database testing factories. |
+        // | PHPUnit     | php artisan vendor:publish PHPUnit   | Publish the PHPUnit files.              |
+        // | Config      | php artisan vendor:publish Config    | Publish the config file for the API.    |
+
+        $this->publishes([__DIR__ . '/Factories' => database_path('factories')], 'Factories');
         $this->publishes([__DIR__ . '/Tests' => 'tests'], 'PHPUnit');
         $this->publishes([
             __DIR__ . '/Config/Timecontrol-api.php' => config_path('Timecontrol-api.php')
-        ], 'config');
+        ], 'Config');
 
         // Routing
         $routeConfig = [
