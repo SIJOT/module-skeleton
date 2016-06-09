@@ -1,0 +1,31 @@
+<?php
+
+namespace Idevelopment\Timecontrol\Api\Transformers;
+
+use App\Teams;
+use League\Fractal;
+
+/**
+ * Class StaffTransformer
+ * 
+ * @package Idevelopment\Timecontrol\Api\Transformers
+ * @author  Tim Joosten <Topairy@gmail.com>
+ * @license https://github.com/tjoosten/timecontrol-api/blob/master/LICENSE GNU
+ * @link    https://github.com/tjoosten/timecontrol-api
+ */
+class TeamsTransformer extends Fractal\TransformerAbstract
+{
+    /**
+     * The team transformer. 
+     *
+     * @param  User $user
+     * @return array
+     */
+    public function transform(Teams $team)
+    {
+        return [
+            'id'   => (int)    $team['id'],
+            'name' => (string) $team->name
+        ];
+    }
+}
