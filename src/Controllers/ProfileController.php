@@ -13,6 +13,11 @@ class ProfileController extends Controller
 {
     public function getProfile()
     {
+
+    }
+
+    public function updateProfile()
+    {
         
     }
 }
