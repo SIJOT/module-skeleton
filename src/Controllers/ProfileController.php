@@ -19,7 +19,7 @@ class ProfileController extends ApiController
 	public function __construct()
 	{
         parent::__construct();
-        
+
 		// Validation rules for the controller.
         $this->validation['fname']        = 'required';
         $this->validation['name']         = 'required';

@@ -15,6 +15,14 @@ use Illuminate\Support\ServiceProvider;
  */
 class ApiServiceProvider extends ServiceProvider
 {
+    // IDEA: Create a facade option for the API logs.
+    // TODO: Build up the contributing file.
+    // TODO: Document installation 
+    // TODO: Create a readme.io portal for the docs. 
+    // TODO: Document the routing. -> Docs folder. 
+    // TODO: Document the routing. -> Source code. 
+    // TODO: Set config values to specify what routes you need.
+
     /**
      * Bootstrap any application services.
      *
@@ -42,7 +50,6 @@ class ApiServiceProvider extends ServiceProvider
             'prefix'    => $this->app['config']->get('Timecontrol-api.route_prefix'),
         ];
 
-        // TODO: Set config values to specify what routes you need.
         $this->getRouter()->group($routeConfig, function($router) {
             // Profile routes
             $router->get('profile', 'ProfileController@getProfile');

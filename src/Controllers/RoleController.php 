@@ -1,3 +1,83 @@
 <?php 
 
-namespace Idevelopment/
+namespace Idevelopment\Timecontrol\Api\Controllers; 
+
+use Illuminate\Routing\Controller;
+use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
+use Illuminate\Http\Request;
+
+/**
+ * Class RoleController. 
+ *
+ * @package  Idevelopment\Timecontrol\Api\Controllers
+ * @author   Tim joosten <Topairy@gail.com>
+ * @license  https://www.github.com/tjoosten/timecontrol-api/blob/master/LICENSE GNU
+ * @link     https://www.github.com/Tjoosten/timecontrol-api
+ */
+class RoleController extends ApiGuardController
+{
+	// TODO: Set notifications on update, create, destroy. 
+	// TODO: Document controller
+	// TODO: Implement PHPUnit files. 
+
+	/**
+	 * validation rules. 
+	 * @var array
+	 */
+	protected $validation;
+
+	/**
+	 * RoleController constructor. 
+	 */ 
+	public function __construct()
+	{
+		parent::__construct();
+
+		// Validation messages 
+		$this->validation['name'] = 'required';
+	}
+
+	public function all()
+	{
+
+	}
+
+	/**
+	 * Show aspecific role. 
+	 * 
+	 * @param  Int   $id the role id in the database. 
+	 * @return Mixed 
+	 */
+	public function specific($id)
+	{
+		try {
+
+		} catch(ModelNotFoundException $e) {
+			$this->response->errorNotFound();
+		}
+	}
+
+	public function create()
+	{
+
+	}
+
+	/**
+	 * Update a role. 
+	 * 
+	 * @return Mixed
+	 */
+	public function update($id)
+	{
+		try {
+
+		} catch(ModelNotFoundException $e) {
+			$this->response->errorNotFound();
+		}
+	}
+
+	public function destroy($id)
+	{
+
+	}
+}

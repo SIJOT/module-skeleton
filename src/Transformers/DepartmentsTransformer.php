@@ -56,7 +56,7 @@ class DepartmentsTransformer extends Fractal\TransformerAbstract
 	public function IncludeTeams(Departments $department)
 	{
 		$teams = $department->teams; 
-		return $this->collection();
+		return $this->collection($teams, new TeamsTransformer);
 	}
 
 	/**
@@ -68,6 +68,6 @@ class DepartmentsTransformer extends Fractal\TransformerAbstract
 	public function IncludeMembers(Departments $department)
 	{
 		$members = $department->members;
-		return $this->collection();
+		return $this->collection($member, new StaffTransformer);
 	}
 }
